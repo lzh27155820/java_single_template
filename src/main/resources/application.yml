@@ -1,0 +1,44 @@
+spring:
+  data:
+    redis:
+      host: 120.25.240.171
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tiny?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: meizu271
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      enabled: true
+      max-request-size: 100MB
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+  profiles:
+    active: dev
+server:
+  port: 6666
+knife4j:
+  enable: false
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:/mapper/**/*.xml
+redis:
+  database: single
+  key:
+    admin: 'ums:admin'
+    resourceList: 'ums:resourceList'
+  expire:
+    common: 86400 # 24\u5C0F\u65F6
+
+jwt:
+  tokenHeader: Authorization #JWT\u5B58\u50A8\u7684\u8BF7\u6C42\u5934
+  secret: mall-admin-secret #JWT\u52A0\u89E3\u5BC6\u4F7F\u7528\u7684\u5BC6\u94A5
+  expiration: 604800 #JWT\u7684\u8D85\u671F\u9650\u65F6\u95F4(60*60*24*7)
+  tokenHead: 'Bearer '  #JWT\u8D1F\u8F7D\u4E2D\u62FF\u5230\u5F00\u5934
