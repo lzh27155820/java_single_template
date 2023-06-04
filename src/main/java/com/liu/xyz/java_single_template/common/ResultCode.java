@@ -15,6 +15,7 @@ public enum ResultCode implements IErrorCode {
 
     private ResultCode(long code, String message) {
         this.code = code;
+        System.out.println("hhhh");
         this.message = message;
     }
 

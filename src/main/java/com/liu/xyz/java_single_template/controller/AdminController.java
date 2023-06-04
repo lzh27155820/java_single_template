@@ -28,10 +28,11 @@ public class AdminController {
     private AdminService adminService;
     @PostMapping("")
     public CommonResult<Admin> eader(@RequestHeader("token") String token){
-        Admin user = new Admin();
+        Admin user = new Admin(); System.out.println("kkkk");
         user.setUsername("dhudgw");
 //        user.setId("1");
         return CommonResult.success(user);
+
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
