@@ -18,6 +18,7 @@ public class JavaSingleTemplateApplication {
     public static void main(String[] args) throws UnknownHostException {
         ConfigurableApplicationContext application = SpringApplication.run(JavaSingleTemplateApplication.class, args);
 
+        System.out.println();
 
         //ConfigurableApplicationContext application=SpringApplication.run(Knife4jSpringBootDemoApplication.class, args);
         Environment env = application.getEnvironment();

@@ -18,6 +18,7 @@ public class GlobalCorsConfig {
      */
     @Bean
     public CorsFilter corsFilter() {
+        System.out.println();
         CorsConfiguration config = new CorsConfiguration();
         //允许所有域名进行跨域调用
         config.addAllowedOriginPattern("*");
