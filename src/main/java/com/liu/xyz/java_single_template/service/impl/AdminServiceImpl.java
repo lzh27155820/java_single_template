@@ -31,7 +31,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
 //    private JwtService jwtService;
     @Override
     public String login(String username, String password) {
-
+        System.out.println("xxxx");
         Admin admin = redisCheckService.getAdmin(username);
 
         if(admin==null){
